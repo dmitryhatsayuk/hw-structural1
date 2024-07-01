@@ -1,14 +1,16 @@
 package org.example;
 
-public class IntsCalculator implements Ints{
+public class IntsCalculator implements Ints {
     protected final Calculator target;
 
-    public IntsCalculator() { this.target = new Calculator(); }
+    public IntsCalculator() {
+        this.target = new Calculator();
+    }
 
     @Override
     public int sum(int arg0, int arg1) {
         //считаем через target
-      return   (int)Math.round(target.newFormula()
+        return (int) Math.round(target.newFormula()
                 .addOperand(arg0)
                 .addOperand(arg1)
                 .calculate(Calculator.Operation.SUM)
